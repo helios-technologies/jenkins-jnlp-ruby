@@ -27,7 +27,7 @@ RUN npm install -g bower gulp
 #
 ENV HOME=/home/jenkins-slave
 
-ARG JENKINS_REMOTING_VERSION=3.26
+ARG JENKINS_REMOTING_VERSION=3.10
 RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar https://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/${JENKINS_REMOTING_VERSION}/remoting-${JENKINS_REMOTING_VERSION}.jar \
     && useradd -d ${HOME} -m jenkins-slave \
     && chmod 755 /usr/share/jenkins \
